@@ -3,7 +3,9 @@ jobs:
   pytester3000:
     runs-on: ubuntu-latest
     steps:
+      - name: Bajar código
+        uses: actions/checkout@v7
       - name: Descargar pytest3000
         run: |
           pip install pytest
-          pytest /test.py
+          pytest test.py
