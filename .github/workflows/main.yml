@@ -1,0 +1,9 @@
+on: push
+jobs:
+  pytester3000:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar pytest3000
+        run: |
+          pip install pytest
+          pytest test.py
